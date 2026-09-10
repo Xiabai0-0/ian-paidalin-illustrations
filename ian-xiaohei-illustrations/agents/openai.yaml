@@ -1,6 +1,0 @@
-interface:
-  display_name: "鹿小鸣 IP 配图"
-  short_description: "为中文文章生成鹿小鸣个人IP风格的怪诞手绘配图"
-  default_prompt: "Use $ian-xiaohei-illustrations 为这篇中文文章设计并生成鹿小鸣个人 IP 风格正文配图。"
-policy:
-  allow_implicit_invocation: true
