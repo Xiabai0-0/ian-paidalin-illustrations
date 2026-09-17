@@ -1,16 +1,27 @@
 # 派大林正文配图生图模板
 
-每张图单独生成。先从 `paidalin-ip.md` 复制“可复制角色块”，再填入内容变量。可用时，把 `assets/ip-reference/paidalin-turnaround.png` 作为直接角色参考；三视图尚未生成前，退回 `assets/ip-reference/paidalin-character-sheet.png` 作为形象源头参考。参考图的渲染质感只用于锁定形象，最终交付仍是白底黑线手绘风格。
+每张正文配图单独生成。先从 `paidalin-ip.md` 复制“可复制角色块”，再填入内容变量。
+
+每次生成必须同时挂两张参考图，缺一不可。文字描述锁不住眼睛画法、线稿密度这类微观特征，只有像素级参考能锁住：
+
+- **Image 1（身份参考）**：`assets/ip-reference/paidalin-turnaround.png`；三视图尚未生成前，退回 `assets/ip-reference/paidalin-character-sheet.png`；脸部细节仍对不上时，加挂 `assets/ip-reference/paidalin-closeup.png`。
+- **Image 2（风格参考）**：从 `assets/examples/` 选一张与当前结构类型最接近的校准样图。眼睛画法、线稿密度、上色方式一律以它为准；只对齐笔触与质感，禁止复刻它的构图、动作与标签。
+
+参考图的渲染质感只用于锁定形象，最终交付仍是白底黑线手绘风格。
 
 ```text
 Use case: illustration-story
 Asset type: 16:9 horizontal Chinese article illustration
 
+Style rules (highest priority, override any generation quality setting):
+Flat, unfinished doodle sketch on pure white paper. Thin, slightly wobbly black pen lines with even, low density. Almost no shading, no cross-hatching, no pencil grain, no paper texture, no render depth, no glossy highlights. Coloring is restrained near-flat fills. If any quality setting pushes toward polished rendering, refined illustration, or storybook painting, these sketch rules win.
+
 Primary request:
 Create one standalone illustration that visualizes exactly one cognitive anchor from the article. The scene should feel like a strange but plausible hand-drawn content workshop, not a slide or formal diagram.
 
 Input images:
-Image 1: direct identity reference for 派大林 (PAIDALIN). Preserve the same pink starfish body shape, wizard hat, cape, monocle, staff, floating heart, and all fixed outfit details.
+Image 1: direct identity reference for 派大林 (PAIDALIN) (character turnaround). Preserve the same pink starfish body shape, wizard hat, cape, monocle, staff, floating heart, and all fixed outfit details.
+Image 2: style calibration sample. Match its exact eye construction, line weight and density, near-flat coloring, and white space. Do not regress toward a generic picture-book look with large glossy eyes. Do not copy its composition, action, or labels.
 
 Scene/backdrop:
 Pure white background. Minimal black hand-drawn line art with slightly wobbly pen lines. Lots of quiet white space. No room background, paper texture, gradient, shadow, UI, or decorative frame.
@@ -47,7 +58,7 @@ Invariants:
 Preserve 派大林's identity anchors exactly. Same pink five-point starfish body with short stubby arms and legs, deep-blue wide-brimmed bent-corner wizard hat with silver vine embroidery, goggle decoration, and curled spiral tip, high-collar layered silver-embroidered cape, gold monocle on the right eye with a fine chain, vine-wrapped crystal staff, and one floating coral-red heart. No Patrick Star likeness, no flower shorts, no spread flat starfish limbs, no costume changes, no removing the hat, monocle, cape, staff, or heart. Keep his personality serious, calm, and subtly humorous.
 
 Avoid:
-PPT infographic, formal flowchart, commercial vector illustration, dense explainer, realistic office background, app UI, glossy 3D render, thick-paint texture, manga action poster, children's cartoon, 2-3-head chibi, cute mascot, Patrick Star likeness, flower shorts, spread flat starfish arms, human five fingers, title in the top-left, structure-name text, long sentences, garbled labels, extra fingers, duplicate limbs, copied Xiaohei or Luming compositions, watermark.
+PPT infographic, formal flowchart, commercial vector illustration, dense explainer, realistic office background, app UI, glossy 3D render, thick-paint texture, pencil-shading texture, storybook picture-book illustration, glossy eyes, manga action poster, children's cartoon, 2-3-head chibi, cute mascot, Patrick Star likeness, flower shorts, spread flat starfish arms, human five fingers, title in the top-left, structure-name text, long sentences, garbled labels, extra fingers, duplicate limbs, copied Xiaohei or Luming compositions, watermark.
 ```
 
 ## 三视图模板

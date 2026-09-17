@@ -18,8 +18,8 @@ description: 生成“派大林”个人 IP 风格的中文文章正文配图。
 - `references/paidalin-ip.md`：派大林的外形、性格、动作、禁忌与可复制角色块。
 - `references/prompt-template.md`：把内容变量、角色规则和视觉规则编译为单张生图提示词。
 - `references/qa-checklist.md`：身份一致性、内容表达和视觉稳定性的验收门槛。
-- `assets/ip-reference/`：角色原始参考与三视图。
-- `assets/examples/`：低频校准样图，只校准一致性，禁止复刻构图。
+- `assets/ip-reference/`：角色原始参考、脸部特写与三视图。
+- `assets/examples/`：校准样图，每次生成正文配图时必须作为 Image 2 风格参考；只对齐笔触与质感，禁止复刻构图。
 
 涉及角色生成或编辑时，必须读取 `references/paidalin-ip.md`。生成正文图时再读取 `style-dna.md`、`composition-patterns.md`、`prompt-template.md`；生成后读取 `qa-checklist.md`。
 
@@ -53,7 +53,14 @@ description: 生成“派大林”个人 IP 风格的中文文章正文配图。
 
 ### 4. 单张生成
 
-用户明确要求生成时，用可用的图像生成工具逐张生成，不把多张图拼成一张。严格使用 `references/prompt-template.md`，并在可用时把 `assets/ip-reference/paidalin-turnaround.png` 作为直接角色参考。
+用户明确要求生成时，用可用的图像生成工具逐张生成，不把多张图拼成一张。严格使用 `references/prompt-template.md`。
+
+参考图是强制项，不是可选项：
+
+- 每张正文配图必须同时挂两张参考：`assets/ip-reference/paidalin-turnaround.png`（身份）+ `assets/examples/` 中一张校准样图（风格）。角色描述写得再细，也替代不了像素级参考。
+- 生成参数避免偏向精修插画的高质量档；只能用高质量档时，依靠模板顶部的 STYLE RULES 草图规则对冲。
+
+首图校准闸：风格未验证前，禁止批量铺量。每批先出 1 张，与 `assets/examples/` 校准样图并排对比眼睛画法、线稿密度和上色方式；对不上就停下修提示词，通过后才继续生成其余。
 
 默认要求：
 
