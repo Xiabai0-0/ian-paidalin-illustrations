@@ -56,7 +56,7 @@
 ## 安装
 
 ```bash
-git clone https://github.com/YOUR-GITHUB/paidalin-illustrations.git
+git clone https://github.com/Xiabai0-0/ian-paidalin-illustrations.git
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
 cp -R ./paidalin-illustrations/paidalin-illustrations "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```

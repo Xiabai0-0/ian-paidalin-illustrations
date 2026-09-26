@@ -12,3 +12,6 @@ dist/
 
 # Logs
 *.log
+
+# 打包产物（发布件移出仓库，存放在 ../paidalin-dist/）
+paidalin-illustrations.zip
